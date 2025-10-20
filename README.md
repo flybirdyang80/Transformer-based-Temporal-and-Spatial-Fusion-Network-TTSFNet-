@@ -17,6 +17,7 @@ Spatiotemporal Fusion Network Based on Improved Transformer for Inverting Subsur
     SSW	    CCMPv3.0	  0.125°  	    月	
   
    3D T/S	GLORYS12V1 	  0.25°	        月	
+   
 
 裁剪北太平洋区域，双线性重采样到0.25°，统一时间分辨率为月均。无效网格点剔除，计算海表异常数据；进行标准化。生成衍生变量DSSTA/DSSSA（海面-次表层月平均差）。3D T/S选33层（5–2000 m）。2011-2020年的数据作为训练集和验证集（随机选取30%作为验证集，70%作为训练集），2021年的数据作为测试集。
 
