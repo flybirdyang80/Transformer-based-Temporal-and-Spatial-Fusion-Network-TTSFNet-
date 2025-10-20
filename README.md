@@ -1,4 +1,4 @@
-# Transformer-based-Temporal-and-Spatial-Fusion-Network-TTSFNet-
+# Transformer based Temporal and Spatial Fusion Network TTSFNet-
 Spatiotemporal Fusion Network Based on Improved Transformer for Inverting Subsurface Thermohaline Structure
 
 本项目提出了TTSFNet模型，在Transformer框架中引入融合卷积与时空增强块，仅用海面遥感异常即可一次性反演北太平洋5–2000 m共33层温盐异常。项目模型训练代码已开源，欢迎复用与改进。
