@@ -3,13 +3,21 @@ Spatiotemporal Fusion Network Based on Improved Transformer for Inverting Subsur
 
 本项目提出了TTSFNet模型，在Transformer框架中引入融合卷积与时空增强块，仅用海面遥感异常即可一次性反演北太平洋5–2000 m共33层温盐异常。项目模型训练代码已开源，欢迎复用与改进。
 研究区域：北太平洋（120°E–90°W，0–60°N）。
+
 数据：
-	变量	来源	    空间分辨率	  时间分辨率	
-	SSH	  AVISO	      0.25°	      日	
-	SSS	  SMAP/SMOS  	0.125°	  日/月	
-	SST	  UKMO OSTIA	0.05°	      日	
-  SSW	  CCMPv3.0	  0.125°  	6 h/月	
-3D T/S	GLORYS12V1	0.25°	      月	
+
+	变量	 来源	     空间分辨率	  时间分辨率	
+	
+	SSH	     AVISO	      0.25°	      	日	
+	
+	SSS	    SMAP/SMOS  	  0.125°	   日/月	
+	
+	SST	    UKMO OSTIA	  0.05°	        日	
+	
+    SSW	    CCMPv3.0	  0.125°  	    月	
+  
+   3D T/S	GLORYS12V1 	  0.25°	        月	
+
 裁剪北太平洋区域，双线性重采样到0.25°，统一时间分辨率为月均。无效网格点剔除，计算海表异常数据；进行标准化。生成衍生变量DSSTA/DSSSA（海面-次表层月平均差）。3D T/S选33层（5–2000 m）。2011-2020年的数据作为训练集和验证集（随机选取30%作为验证集，70%作为训练集），2021年的数据作为测试集。
 
 模型：模型设计了双分支Transformer结构，输入海面遥感异常（SSHA、SSTA、SSSA、SSWA）+衍生垂直变量（DSSTA/DSSSA），多头注意力+卷积前馈+Transformer提取20×20窗口的空间特征，TFEB+Transformer提取前12月的时间特征，融合后一次输出当前月份的33层STA/SSA。
