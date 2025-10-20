@@ -30,4 +30,4 @@ Spatiotemporal Fusion Network Based on Improved Transformer for Inverting Subsur
 
 结果：2021全年33层温盐异常平均R²可达0.705/0.510，RMSE仅0.441 ℃/0.062 psu；较 FCNN/CNN/BiLSTM/CBAM-CNN/Transformer/MTSAN，R²提高0.029–0.158，RMSE降低8–15 %；且时空-垂向误差稳定。
 
-**发表文章：Mu J, Yang J, Wang C, et al. Spatiotemporal Fusion Network Based on Improved Transformer for Inverting Subsurface Thermohaline Structure[J]. IEEE Transactions on Geoscience and Remote Sensing, 2024.  DOI: https://10.1109/TGRS.2024.3446805**
+**发表文章：Mu J, Yang J, Wang C, et al. Spatiotemporal Fusion Network Based on Improved Transformer for Inverting Subsurface Thermohaline Structure[J]. IEEE Transactions on Geoscience and Remote Sensing, 2024.  DOI: [https://10.1109/TGRS.2024.3446805](https://ieeexplore.ieee.org/abstract/document/10644046)**
